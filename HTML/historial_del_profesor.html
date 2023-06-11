@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Monitor de Rendimiento Acádemico</title>
+    <link rel="preload" href="../CSS/styles.css" as="style">
+    <link href="../CSS/styles.css" rel="stylesheet">
+    <link rel="preload" href="../CSS/normalize.css" as="style">
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="preload" href="../JS/utils.js">
+    <script src="../JS/utils.js"></script>
+</head>
+<body>
+    <header><h1>Sistema Monitor de Rendimiento Acádemico</h1></header>
+    <div class="nav_bg">
+        <nav class="navegacion_principal contenedor">
+            <a href="javascript:window.history.back();">Volver atrás</a>
+            <a href="iniciar_sesion.html">Cerrar Sesión</a>
+        </nav>
+    </div>
+
+    <section class="expediente_profe">
+        <form action="" class="selector">
+            <label for="profesor" >Seleccione el profesor:</label>
+            <select name="profesor" id="profesor" onchange="mostrarProf()">
+                <option value="---">---</option>
+                <option value="1">Antonio Silva</option>
+                <option value="2">Wilfredo Rangel</option>
+                <option value="3">Rossana Diaz</option>
+                <option value="4">Lorenzo Centeno</option>
+                <option value="5">Gary Romero</option>
+                <option value="6">Walter Beyer</option>
+            </select>  
+        </form>
+        <div id="nombre"></div>
+        <table class="contenedor sombra tabla">
+            <tr>
+                <th>Periodo</th>
+                <th>Año</th>
+                <th>Asignatura</th>
+                <th>Sección</th>
+                <th class="dif">Nivel</th>
+            </tr>
+            <tbody id="tbody" class="dif2">
+        
+            </tbody>
+        </table>
+    </section>
+    
+</body>

@@ -1,0 +1,324 @@
+:root {
+    --blanco:#FFFFFF;
+    --negro: #212121;
+    --primario:#f8ee63;
+    --secundario:#49a2d6;
+    --terciario:#757575;
+    --cuaternario:#dfe9f3;
+}
+
+html {
+     font-size: 62.5%;
+     box-sizing: border-box;
+    /* scroll-snap-type: y mandatory;*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--cuaternario) 0%, var(--blanco) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 3.8rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+.titulo span {
+    font-size: 2rem;
+}
+
+.contenedor {
+    max-width: 120rem; 
+    margin: 0 auto;
+}
+
+.boton {
+    background-color: var(--terciario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 75%;
+    text-align: center;
+    border: none;
+}
+.titulos {
+    padding: 1rem;
+    color: var(--blanco);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+    
+}
+.boton:hover {
+    cursor: pointer;
+    color: var(--secundario);
+}
+/*Utilidades*/
+.w-sm-100 {
+    width: 100%;
+    margin-top: 3rem;
+}
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+.flex {
+    display: flex;
+    
+}
+.alinear-derecha {
+    justify-content: flex-end;
+}
+.nav_bg {
+    background-color: var(--secundario);
+}
+
+.navegacion_principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+}
+
+.navegacion_principal a {
+    display: block;
+    align-items: center;
+    color: var(--blanco); 
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.navegacion_principal a:hover {
+    background-color: var(--primario);
+    color: var(--negro);
+}
+/*Registro*/
+    .registro {
+        width: 400px;
+        background-color: var(--secundario);
+        padding: 20px;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 4px;
+    }
+
+    .registro h3{
+        font-size: 22px;
+        margin-top: 15px;
+    }
+
+    .controls {
+        width: 100%;
+        background-color: var(--cuaternario);
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid black;
+        font-size: 18px;
+    }
+
+    .registro .boton {
+        width: 100%;
+        background-color: var(--terciario);
+        border: none;
+        padding: 12px;
+        color:var(--blanco);
+        margin: 16px 0;
+        font-size: 18px;
+    }
+
+    .registro span {
+        color: var(--blanco);
+        margin-left: 10px;
+        margin-top: 3px;
+    }
+
+    .link {
+        outline: none;
+        text-decoration: none;
+        padding: 2px 1px 0;
+        color: var(--blanco);
+    }
+
+    .link:hover {
+        color: var(--terciario);
+    }
+
+    /*Index Estudiante*/
+    
+    .index_estudiante {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+    .pestaña_grande {
+        grid-column: 1/3;
+    }
+    .funcion {
+        outline: none;
+        text-decoration: none;
+        padding: 2px 1px 0;
+        color: var(--negro);
+    }
+    .funcion:hover {
+        color: var(--secundario);
+    }
+    /*Index Profesor*/
+    .index_profesor {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+
+    /*Tabla de expedientes (Profesor)*/
+    table {
+        border-collapse: collapse;
+        width: 85%;
+        margin-top: 1.8rem;
+        
+      }
+      th, td {
+        text-align: center;
+        padding: 4px;
+        border-right: 3.5px solid var(--secundario);
+        border-radius: 1rem;
+        font-size: 1.9rem;
+        padding: 2.7rem;  
+        border-bottom: 3.5px solid var(--secundario);      
+      }
+      .dif {
+        border-right: none;
+      }
+      th {
+        background-color: white;
+        font-size: 2.2rem;
+        border-bottom: 3.5px solid var(--secundario);
+      }
+      /*Selector estudiante*/
+      .selector {
+        width: 33%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+        -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+        box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+        background-color: var(--blanco);
+        border-radius: 0.6rem;
+        padding: 1.1rem;
+        margin-bottom: 1.2rem;
+      }
+      .sombra {
+        -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+        -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+        box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+        background-color: var(--blanco);
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+    .boton2 {
+        height: 3.6rem;
+        margin-left: 1.2rem;
+    }
+    /*Página de planificacion**/
+    .botones {
+        display: block;
+        align-items: center;
+        color: var(--blanco); 
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .botones:hover {
+        background-color: var(--primario);
+        color: var(--negro);
+    }
+    .especial {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 1.8rem;
+        width: 120rem;
+    }
+    .asignaturas {
+        background-color: var(--secundario);
+    }
+    /*Pagina expediente alumno*/
+    .busqueda {
+        margin-left: 2rem;
+        width: 20%;
+    }
+    /*Pagina bitacora*/
+    .actu {
+        width: 400px;
+        background-color: var(--secundario);
+        padding: 20px;
+        margin: auto;
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+    .actu .boton {
+        width: 100%;
+        background-color: var(--terciario);
+        border: none;
+        padding: 12px;
+        color:var(--blanco);
+        margin: 16px 0;
+        font-size: 18px;
+    }
+    .cuadro_texto {
+        width: 100%;
+        height: 185px;
+        background-color: var(--blanco);
+        border: none;
+        padding: 12px;
+        color:var(--negro);
+        margin: 16px 0;
+        font-size: 18px;
+        resize: none;
+    }
+/***/

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Monitor de Rendimiento Acádemico</title>
+    <link rel="preload" href="../CSS/styles.css" as="style">
+    <link href="../CSS/styles.css" rel="stylesheet">
+    <link rel="preload" href="../CSS/normalize.css" as="style">
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="preload" href="../JS/utils.js">
+    <script src="../JS/utils.js"></script>
+</head>
+
+<body>
+    <header><h1>Sistema Monitor de Rendimiento Acádemico</h1></header>
+
+    <div class="nav_bg">
+        <nav class="navegacion_principal contenedor">
+            <a href="javascript:window.history.back();">Volver atrás</a>
+            <a href="iniciar_sesion.html">Cerrar Sesión</a>
+        </nav>
+    </div>
+
+    <section class="expediente_profe">
+        <form action="" class="selector">
+            <label for="Estudiante" >Selecciona el estudiante:</label>
+            <select name="Estudiante" id="Estudiante" onchange="mostrarUsuario()">
+                <option value="---">---</option>
+                <option value="30136061">30136061</option>
+                <option value="30136615">30136615</option>
+                <option value="30628742">30628742</option>
+                <option value="30328423">30328423</option>
+                <option value="30124461">30124461</option>
+                <option value="30464495">30464495</option>
+                <option value="30629401">30629401</option>
+            </select>  
+        </form>
+        <table class="contenedor sombra tabla">
+            <tr>
+                <th>Estudiante</th>
+                <th>Matemática I</th>
+                <th>Matemática Discretas I</th>
+                <th>Algoritmos y Programación</th>
+                <th>Introd. a la Informática</th>
+                <th>Promedio</th>
+                <th class="dif">Eficiencia</th>
+            </tr>
+            <tr class="dif2">
+                <td id="estudiante">---</td>
+                <td id="notas1">---</td>
+                <td id="notas2">---</td>
+                <td id="notas3">---</td>
+                <td id="notas4">---</td>
+                <td id="promedio">---</td>
+                <td class="dif" id="eficiencia">---</td>
+            </tr>
+        </table>
+    </section>
+</body>
